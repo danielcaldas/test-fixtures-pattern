@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`backgroundColorReplacer should not replace color if they do not match 1`] = `"background-color: rgb(254, 0, 0)"`;
+
+exports[`backgroundColorReplacer should not replace color there is no new color specified 1`] = `"background-color: rgb(253, 0, 0)"`;
+
+exports[`backgroundColorReplacer should replace color if they match 1`] = `"background-color: rgb(0, 255, 0)"`;
+
+exports[`backgroundColorReplacer should replace color if they match and add opacity when defined 1`] = `"background-color: rgba(0, 255, 0, 0.5)"`;

@@ -1,0 +1,28 @@
+{
+  "name": "test-fixtures-pattern",
+  "version": "0.0.0",
+  "description": "A simple demonstration of a fixtures test based architecture in JavaScript",
+  "main": "replacer.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielcaldas/test-fixtures-pattern.git"
+  },
+  "keywords": [
+    "javascript",
+    "unit",
+    "testing",
+    "jest"
+  ],
+  "author": "Daniel Caldas",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/danielcaldas/test-fixtures-pattern/issues"
+  },
+  "homepage": "https://github.com/danielcaldas/test-fixtures-pattern#readme",
+  "devDependencies": {
+    "jest": "24.9.0"
+  }
+}

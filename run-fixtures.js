@@ -14,7 +14,7 @@ function generateFixtureJestSnippets(files) {
 
   const open = `
     // WARNING: this file is generated automatically
-    const backgroundColorReplacer = require('../replacer');
+    const backgroundColorReplacer = require('../../replacer');
 
     describe('backgroundColorReplacer', () => {
   `;
@@ -26,7 +26,7 @@ function generateFixtureJestSnippets(files) {
       return `
         it("${specName}", () => {
           try {
-            const { target, options } = require(\`./${fname}\`);
+            const { target, options } = require(\`../${fname}\`);
             expect(backgroundColorReplacer(target, options)).toMatchSnapshot();
           } catch(error) {
             expect(error).toMatchSnapshot();
@@ -53,9 +53,9 @@ function parseFileTree(err, files) {
     process.exit(1);
   }
 
-  const tmp = generateFixtureJestSnippets(files.slice(1));
+  const tmp = generateFixtureJestSnippets(files.filter(f => f !== 'tests'));
 
-  fs.writeFileSync(`${FIXTURES_BASE_DIR}/fixtures.spec.js`, tmp);
+  fs.writeFileSync(`${FIXTURES_BASE_DIR}/tests/fixtures.spec.js`, tmp);
 }
 
 fs.readdir(FIXTURES_BASE_DIR, parseFileTree);

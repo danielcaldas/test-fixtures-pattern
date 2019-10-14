@@ -5,7 +5,9 @@
   "main": "replacer.js",
   "scripts": {
     "test": "jest --coverage",
-    "test:watch": "jest --watchAll --coverage"
+    "test:watch": "jest --watchAll --coverage",
+    "fixtures:run": "rm ./fixtures/fixtures.spec.js && node run-fixtures && jest ./fixtures/fixtures.spec.js",
+    "fixtures:clean": "rm ./fixtures/fixtures.spec.js && node run-fixtures && jest -u ./fixtures/fixtures.spec.js"
   },
   "repository": {
     "type": "git",

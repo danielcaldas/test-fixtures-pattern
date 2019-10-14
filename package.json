@@ -5,7 +5,10 @@
   "main": "replacer.js",
   "scripts": {
     "test": "jest --coverage",
-    "test:watch": "jest --watchAll --coverage"
+    "test:watch": "jest --watchAll --coverage",
+    "fixtures:run": "node run-fixtures && jest ./fixtures/tests/fixtures.spec.js",
+    "fixtures:clean": "rm ./fixtures/tests/fixtures.spec.js && node run-fixtures && jest -u ./fixtures/tests/fixtures.spec.js",
+    "fixtures:watch": "nodemon --watch ./fixtures/*.js --exec npm run fixtures:run"
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,7 @@
   },
   "homepage": "https://github.com/danielcaldas/test-fixtures-pattern#readme",
   "devDependencies": {
-    "jest": "24.9.0"
+    "jest": "24.9.0",
+    "nodemon": "1.19.3"
   }
 }

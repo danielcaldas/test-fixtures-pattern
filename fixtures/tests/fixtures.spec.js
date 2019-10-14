@@ -4,7 +4,7 @@
 
     describe('backgroundColorReplacer', () => {
   
-        it("replace color-when-match", () => {
+        it("replace color when match", () => {
           try {
             const { target, options } = require(`../replace-color-when-match.js`);
             expect(backgroundColorReplacer(target, options)).toMatchSnapshot();

@@ -21,7 +21,7 @@ function generateFixtureJestSnippets(files) {
   const close = `});`
   const specs = files.map(fname => {
       const input = fs.readFileSync(`${FIXTURES_BASE_DIR}/${fname}`);
-      const specName = fname.split('.js')[0].replace(/[-]/, ' ', 'gi');
+      const specName = fname.split('.js')[0].replace(/[-]/gi, ' ');
 
       return `
         it("${specName}", () => {

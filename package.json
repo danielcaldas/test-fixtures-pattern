@@ -8,7 +8,7 @@
     "test:watch": "jest --watchAll --coverage",
     "fixtures:run": "node run-fixtures && jest ./fixtures/tests/fixtures.spec.js",
     "fixtures:clean": "rm ./fixtures/tests/fixtures.spec.js && node run-fixtures && jest -u ./fixtures/tests/fixtures.spec.js",
-    "fixtures:watch": "nodemon --watch ./fixtures/*.js --exec npm run fixtures:run"
+    "fixtures:watch": "nodemon --watch ./fixtures --ignore ./fixtures/tests --exec \"npm run fixtures:run\""
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,6 @@
-# test-fixtures-pattern
+# Unit testing with fixtures unleashed
+This repository is just an example for explaining how fixtures can be set up in within a project, you can read more about it [in this blog post](https://goodguydaniel.com/blog/unit-testing-with-fixtures-unleashed/).
+
 A simple demonstration of a fixtures test based architecture in JavaScript. A simple case study scenario is built around a function called `backgroundColorReplacer` that is exposed in main *entroypoint* file `replacer.js`.
 
 ## The case study
@@ -29,3 +31,5 @@ run-fixtures.js
 
 - `fixtures` - folder where test cases are specified.
 - `run-fixtures` - responsible for generating `fixtures/tests/fixtures.spec.js`, where the actual tests are outputted.
+
+✍️ ["Unit testing with fixtures unleashed"](https://goodguydaniel.com/blog/unit-testing-with-fixtures-unleashed/) @ [goodguydaniel.com](https://goodguydaniel.com)
